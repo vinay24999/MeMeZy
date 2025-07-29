@@ -1,0 +1,7 @@
+<% layout('layout') %>
+<h2>Email Verification</h2>
+<p>An OTP has been sent to <%= email %>. Please enter it below.</p>
+<form method="post">
+  <input name="otp" required placeholder="Enter OTP"><br>
+  <button type="submit" disabled>Verify OTP (feature coming soon)</button>
+</form>

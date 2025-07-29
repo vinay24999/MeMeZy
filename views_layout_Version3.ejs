@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memezy</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <a href="/">Memezy</a>
+    <% if (user) { %>
+      <span>Welcome, <%= user.name %>!</span> | <a href="/user/profile">Profile</a> | <a href="/logout">Logout</a>
+    <% } else { %>
+      <a href="/login">Login</a> | <a href="/register">Register</a>
+    <% } %>
+    <% if (user && user.role === 'admin') { %>
+      | <a href="/admin">Admin</a>
+    <% } %>
+  </header>
+  <main>
+    <%- body %>
+  </main>
+</body>
+</html>

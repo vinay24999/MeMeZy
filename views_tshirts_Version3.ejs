@@ -1,0 +1,11 @@
+<% layout('layout') %>
+<h2>All Memezy T-Shirts</h2>
+<ul>
+  <% tshirts.forEach(function(t) { %>
+    <li>
+      <b><%= t.title %></b> - <%= t.language %> - ₹<%= t.price %><br>
+      <img src="<%= t.imageURL %>" alt="<%= t.title %>" width="120"><br>
+      <%= t.description %>
+    </li>
+  <% }) %>
+</ul>

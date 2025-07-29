@@ -1,0 +1,10 @@
+<% layout('layout') %>
+<h2>Register</h2>
+<% if (typeof error !== 'undefined') { %><p style="color:red;"><%= error %></p><% } %>
+<form method="post">
+  <input name="name" required placeholder="Name"><br>
+  <input name="email" type="email" required placeholder="Email"><br>
+  <input name="phone" required placeholder="Phone"><br>
+  <input name="password" type="password" required placeholder="Password"><br>
+  <button type="submit">Register</button>
+</form>

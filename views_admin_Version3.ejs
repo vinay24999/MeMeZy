@@ -1,0 +1,20 @@
+<% layout('layout') %>
+<h2>Admin Dashboard</h2>
+<form method="post" action="/admin/add-tshirt">
+  <h3>Add New T-shirt</h3>
+  <input name="title" required placeholder="Title"><br>
+  <input name="description" required placeholder="Description"><br>
+  <input name="language" required placeholder="Language"><br>
+  <input name="imageURL" required placeholder="Image URL"><br>
+  <input name="price" type="number" required placeholder="Price"><br>
+  <button type="submit">Add T-shirt</button>
+</form>
+<h3>All T-shirts</h3>
+<ul>
+  <% tshirts.forEach(function(t) { %>
+    <li>
+      <b><%= t.title %></b> - <%= t.language %> - ₹<%= t.price %>
+      <img src="<%= t.imageURL %>" alt="<%= t.title %>" width="100">
+    </li>
+  <% }) %>
+</ul>
